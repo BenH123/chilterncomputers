@@ -1,0 +1,55 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  canonical?: string;
+}
+const {
+  title,
+  description,
+  keywords = `Computer repair services, Laptop repair, Computer diagnostics and repair, Virus removal, Data recovery, PC repair, Computer troubleshooting, Screen repair, Hard drive repair, Computer maintenance, Computer repair services in Romford, Laptop repair in Romford, Romford computer repair, Computer repair near me, Macbook Pro repair, Gaming laptop repair, Business computer repair, On-site computer repair, Emergency computer repair, Computer upgrades and enhancements, PC optimization services, Data backup and recovery, Computer supplies, PC components, Computer hardware, Computer accessories, Office computer supplies, IT equipment, Computer peripherals, Bulk computer supplies, Business computer equipment, Computer monitors, Keyboards and mice, Computer cables, Memory/RAM, Hard drives/SSD, Graphics cards, Motherboards, Power supplies, Computer cases, Buy computers online, New computers for sale, Used computers Romford, Refurbished laptops, Gaming computers for sale, Business computers, Cheap computers, Computer deals, Best laptops 2025, Computer reviews, Brand comparison, Gaming laptop reviews, Best computers for business`,
+  ogImage,
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  canonical
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {/* Open Graph Meta Tags */}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:type" content={ogType} />
+    {/* Twitter Card Meta Tags */}
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    <link rel="stylesheet" href="/global.css">
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<!--
+Usage Example:
+---
+import SEOLayout from '../layouts/SEOLayout.astro';
+---
+<SEOLayout title="Laptop Repair in Romford | Fast & Reliable" description="Expert laptop and computer repair services in Romford. Virus removal, data recovery, screen repair, and more. Call today!" />
+--> 
