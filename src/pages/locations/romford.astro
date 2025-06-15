@@ -48,7 +48,17 @@ import SEOLayout from '../../layouts/SEOLayout.astro';
         description: 'RAM, SSD, and performance upgrades done at your home or office.',
       }]}
     />
-
+    <section class="about-romford">
+      <div class="container">
+        <h2>About Romford</h2>
+        <p>
+          Romford is a vibrant town in East London, known for its bustling market, rich history, and strong community spirit. From the historic Romford Market to the modern shopping centres and entertainment venues, Romford is a hub for both families and businesses. We're proud to offer mobile computer repair and IT support to homes and businesses across Romford, Harold Hill, Gidea Park, Collier Row, and the wider Essex area.
+        </p>
+        <p>
+          Whether you're a local business needing IT support or a resident looking for fast laptop repair, we're here to help—right on your doorstep.
+        </p>
+      </div>
+    </section>
     <Contact 
       title="Book a Home or Business Visit in Romford"
       subtitle="Call 01708 123 456 or email info@techfixpro.co.uk – We come to you, 7 days a week!"
@@ -457,5 +467,33 @@ import SEOLayout from '../../layouts/SEOLayout.astro';
       max-width: 300px;
       text-align: center;
     }
+  }
+
+  .about-romford {
+    background: var(--light, #f8faff);
+    padding: 3rem 0;
+    margin: 3rem 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  .about-romford .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .about-romford h2 {
+    color: var(--primary, #0066cc);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+  .about-romford p {
+    color: var(--text, #2d3748);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    text-align: center;
   }
 </style>
